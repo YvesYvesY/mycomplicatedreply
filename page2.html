@@ -10,5 +10,22 @@
     <textarea rows="8" readonly>This is the text for Page 1. Hello!</textarea>
     <a class="short-link" href="page3.html">Go to Page 3</a>
   </div>
+  <script>
+  function fakeBanUser() {
+    localStorage.setItem("banned", "yes");
+  }
+
+  window.onload = function () {
+    if (localStorage.getItem("banned") === "yes") {
+      document.body.innerHTML = `
+        <div style="text-align:center; margin-top: 100px;">
+          <h1>You are banned.</h1>
+          <p>Access has been denied.</p>
+        </div>
+      `;
+    }
+  };
+</script>
+
 </body>
 </html>
