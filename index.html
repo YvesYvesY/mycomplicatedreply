@@ -22,11 +22,7 @@ I see this server as a journaling space with occasional interactable characters 
 
   </div>
 <script>
-  function fakeBanUser() {
-    localStorage.setItem("banned", "yes");
-  }
-
-  window.onload = function () {
+  window.addEventListener("pageshow", function () {
     if (localStorage.getItem("banned") === "yes") {
       document.body.innerHTML = `
         <div style="text-align:center; margin-top: 100px;">
@@ -35,8 +31,9 @@ I see this server as a journaling space with occasional interactable characters 
         </div>
       `;
     }
-  };
+  });
 </script>
+
 
 </body>
 </html>
