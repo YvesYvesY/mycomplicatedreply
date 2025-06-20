@@ -7,25 +7,29 @@
 <body>
   <div class="container">
     <h2>Page 3</h2>
-    <textarea rows="8" readonly>This is the text for Page 1. Hello!</textarea>
-    <a class="short-link" href="index.html" onclick="fakeBanUser()>← Back to Home</a>
+    <textarea rows="8" readonly>
+I'm gonna die early due to feeling stress most of my life anyway, so who cares, like stress really really affects your health and yeah, my 2 year younger brother started showing signs of bipolarness a year ago precisely, he kept badmouthing me for all my hopelessness and reclusiveness and I keep brushing off his insults saying I'll forget it like how I forget my many problems and bad moments by thinking hard to not think, and I have never talked about this to anyone for a year, except here, he's been back now for 8 months and we have never talked at all, I ignored him too long even before his mental break, and I guess that's what is rn
+
+I've exhausted my mental energy, thanks for the think, sorry for the late reply and I hope you don't get read this part because it feels cringe, but I want to do cringe things, and to feel less like an abomination in my head, I complain too much, whine too much on the internet, why not make it absurd?
+</textarea>
+    <a class="short-link" href="index.html" onclick="fakeBanUser()">← Back to Home</a>
   </div>
-      <script>
-  function fakeBanUser() {
-    localStorage.setItem("banned", "yes");
-  }
 
-  window.onload = function () {
-    if (localStorage.getItem("banned") === "yes") {
-      document.body.innerHTML = `
-        <div style="text-align:center; margin-top: 100px;">
-          <h1>You are banned.</h1>
-          <p>Access has been denied.</p>
-        </div>
-      `;
+  <script>
+    function fakeBanUser() {
+      localStorage.setItem("banned", "yes");
     }
-  };
-</script>
 
+    window.onload = function () {
+      if (localStorage.getItem("banned") === "yes") {
+        document.body.innerHTML = `
+          <div style="text-align:center; margin-top: 100px;">
+            <h1>You are banned.</h1>
+            <p>Access has been denied.</p>
+          </div>
+        `;
+      }
+    };
+  </script>
 </body>
 </html>
