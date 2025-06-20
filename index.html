@@ -8,23 +8,11 @@
   <div class="container">
     <h2>Home Page</h2>
     <textarea rows="8" readonly>This is the main page. Type in the box below or use one of the links.</textarea>
-    
-    <input type="text" placeholder="Type a link like page1.html or page2.html" id="shortInput" />
+
 
     <a class="short-link" href="page1.html">Go to Page 1</a>
-    <a class="short-link" href="page2.html">Go to Page 2</a>
-    <a class="short-link" href="page3.html">Go to Page 3</a>
 
-    <button onclick="goToLink()">Go</button>
   </div>
 
-  <script>
-    function goToLink() {
-      const value = document.getElementById('shortInput').value.trim();
-      if (value) {
-        window.location.href = value;
-      }
-    }
-  </script>
 </body>
 </html>
