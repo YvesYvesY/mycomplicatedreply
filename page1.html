@@ -17,12 +17,8 @@ I don't wanna keep complaining about being unproductive again like I have been f
     <a class="short-link" href="page2.html">Go to Page 2</a>
 
   </div>
-  <script>
-  function fakeBanUser() {
-    localStorage.setItem("banned", "yes");
-  }
-
-  window.onload = function () {
+<script>
+  window.addEventListener("pageshow", function () {
     if (localStorage.getItem("banned") === "yes") {
       document.body.innerHTML = `
         <div style="text-align:center; margin-top: 100px;">
@@ -31,8 +27,9 @@ I don't wanna keep complaining about being unproductive again like I have been f
         </div>
       `;
     }
-  };
+  });
 </script>
+
 
 </body>
 </html>
